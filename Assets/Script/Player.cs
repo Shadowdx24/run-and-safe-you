@@ -5,18 +5,27 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] Rigidbody2D player;
+    
     [SerializeField] private float speed;
+    
+    [SerializeField] GameObject Winscene;
+    
+    [SerializeField] GameObject losescene;
     // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
     // Update is called once per frame
+    
     void Update()
     {
-        move();   
+        move();
+        win();
     }
+    
     private void move()
     {
         if (Input.GetAxis("Horizontal") > 0)
@@ -35,5 +44,26 @@ public class Player : MonoBehaviour
         {
             transform.position += Vector3.down * Time.deltaTime * speed;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Game Over!");
+            //player.gravityScale*=-1;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("goal"))
+        {
+            Debug.Log("You Win!");
+        }
+    }
+    
+    private void win()
+    {
+        Winscene.SetActive(true);
     }
 }

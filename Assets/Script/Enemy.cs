@@ -22,6 +22,8 @@ public class NewBehaviourScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             rd.gravityScale *= -1;
-        }        
+        }       
     }
+
+    
 }
