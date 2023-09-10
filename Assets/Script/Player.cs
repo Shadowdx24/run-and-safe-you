@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     
     [SerializeField] GameObject Winscene;
     
-    [SerializeField] GameObject losescene;
+    [SerializeField] GameObject Losescene;
     // Start is called before the first frame update
     
     void Start()
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         move();
-        win();
+        //win();
     }
     
     private void move()
@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Game Over!");
             //player.gravityScale*=-1;
+            lose();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,11 +60,16 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("goal"))
         {
             Debug.Log("You Win!");
+            win();
         }
     }
     
     private void win()
     {
         Winscene.SetActive(true);
+    }
+    private void lose()
+    {
+        Losescene.SetActive(true);
     }
 }

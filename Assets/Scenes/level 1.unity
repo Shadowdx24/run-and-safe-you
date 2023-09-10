@@ -2905,7 +2905,7 @@ MonoBehaviour:
   player: {fileID: 1391141250}
   speed: 5
   Winscene: {fileID: 560915740}
-  losescene: {fileID: 1216922528}
+  Losescene: {fileID: 1216922528}
 --- !u!1 &1530127313
 GameObject:
   m_ObjectHideFlags: 0
