@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 183905280}
   - component: {fileID: 183905279}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: btnExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +273,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 183905280}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1391141251}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &183905280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,7 +856,7 @@ GameObject:
   - component: {fileID: 491753366}
   - component: {fileID: 491753365}
   m_Layer: 5
-  m_Name: Button
+  m_Name: btnRestart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -913,7 +925,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 491753366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1391141251}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &491753366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,7 +1200,7 @@ GameObject:
   - component: {fileID: 585205875}
   - component: {fileID: 585205874}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: btnExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1245,7 +1269,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 585205875}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1391141251}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &585205875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1870,7 +1906,7 @@ GameObject:
   - component: {fileID: 936106144}
   - component: {fileID: 936106143}
   m_Layer: 5
-  m_Name: Button
+  m_Name: btnRestart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1939,7 +1975,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 936106144}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1391141251}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &936106144
 MonoBehaviour:
   m_ObjectHideFlags: 0

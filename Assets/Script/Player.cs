@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject Winscene;
     
     [SerializeField] GameObject Losescene;
+
+    private float a1;
+    
     // Start is called before the first frame update
     
     void Start()
@@ -61,15 +66,30 @@ public class Player : MonoBehaviour
         {
             Debug.Log("You Win!");
             win();
+            
         }
     }
     
     private void win()
     {
         Winscene.SetActive(true);
+        Time.timeScale = 0f;
+       
     }
     private void lose()
     {
         Losescene.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Exit()
+    {
+            //Application.Quit();
+            Debug.Log("Exit");
+        
+    }
+    public void Restart()
+    {
+        Debug.Log("Star Game");
     }
 }
