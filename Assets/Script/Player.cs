@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -86,10 +87,12 @@ public class Player : MonoBehaviour
     {
             //Application.Quit();
             Debug.Log("Exit");
-        
     }
+
     public void Restart()
     {
         Debug.Log("Star Game");
+        SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
     }
 }
