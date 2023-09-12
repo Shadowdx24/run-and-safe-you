@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     
     [SerializeField] GameObject Losescene;
 
-    private float a1;
     
     // Start is called before the first frame update
     
