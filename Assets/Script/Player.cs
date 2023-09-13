@@ -94,4 +94,16 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
     }
+    public void level2()
+    {
+        Debug.Log("Level 2");
+        SceneManager.LoadScene(2);
+        Time.timeScale = 1f;
+    }
+    //public void level3()
+    //{
+    //    Debug.Log("Level 3");
+    //    SceneManager.LoadScene(2);
+    //    Time.timeScale = 1f;
+    //}
 }
