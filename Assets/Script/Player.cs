@@ -15,7 +15,10 @@ public class Player : MonoBehaviour
     
     [SerializeField] GameObject Losescene;
 
-    
+    private bool moveUp=false;
+    private bool moveDown=false;
+    private bool moveLeft=false;
+    private bool moveRight=false;
     // Start is called before the first frame update
     
     void Start()
@@ -27,28 +30,66 @@ public class Player : MonoBehaviour
     
     void Update()
     {
+        checkKeyBoardInput();
         move();
         //win();
     }
     
     private void move()
     {
-        if (Input.GetAxis("Horizontal") > 0)
+        if (moveRight)
         {
             transform.position += Vector3.right * Time.deltaTime * speed;
         }
-        if (Input.GetAxis("Horizontal") < 0)
+        if (moveLeft)
         {
             transform.position += Vector3.left * Time.deltaTime * speed;
         }
-        if (Input.GetAxis("Vertical") > 0)
+        if (moveUp)
         {
             transform.position += Vector3.up * Time.deltaTime * speed;
         }
-        if (Input.GetAxis("Vertical") < 0)
+        if (moveDown)
         {
             transform.position += Vector3.down * Time.deltaTime * speed;
         }
+    }
+
+    private void checkKeyBoardInput()
+    {
+        if (Input.GetAxis("Horizontal")>0) 
+        {
+            moveRight = true;
+        }
+        else
+        {
+            moveRight = false;
+        }
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            moveLeft = true;
+        }
+        else
+        {
+            moveLeft = false;
+        }
+        if (Input.GetAxis("Vertical") > 0)
+        {
+            moveUp = true;
+        }
+        else
+        {
+            moveUp = false;
+        }
+        if (Input.GetAxis("Vertical") < 0)
+        {
+            moveDown = true;
+        }
+        else
+        {
+            moveDown = false;
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -106,4 +147,39 @@ public class Player : MonoBehaviour
     //    SceneManager.LoadScene(2);
     //    Time.timeScale = 1f;
     //}
+
+    public void moveRightInputEnter()
+    {
+        moveRight = true;
+    }
+    public void moveRightInputExit()
+    {
+        moveRight=false;
+    }
+
+    public void moveLeftInputEnter()
+    {
+         moveLeft = true;
+    }
+    public void moveLeftInputExit()
+    {
+        moveLeft = false;
+    }
+    public void moveUpInputEnter()
+    {
+        moveUp = true;
+    }
+    public void moveUpInputExit()
+    {
+        moveUp = false;
+    }
+    public void moveDownInputEnter()
+    {
+        moveDown = true;
+    }
+    public void moveDownInputExit()
+    {
+        moveDown = false;
+    }
+
 }
