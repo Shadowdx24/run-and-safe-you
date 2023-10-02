@@ -15,22 +15,29 @@ public class Player : MonoBehaviour
     
     [SerializeField] GameObject Losescene;
 
+    [SerializeField] GameObject ChooseInputscene;
+
     private bool moveUp=false;
     private bool moveDown=false;
     private bool moveLeft=false;
     private bool moveRight=false;
+    private bool useKeyboardInput=true;
     // Start is called before the first frame update
     
     void Start()
     {
-        
+        chooseInput();
     }
 
     // Update is called once per frame
     
     void Update()
     {
-        checkKeyBoardInput();
+        if (useKeyboardInput)
+        {
+            checkKeyBoardInput();
+        }
+
         move();
         //win();
     }
@@ -123,6 +130,13 @@ public class Player : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    private void chooseInput()
+    {
+        ChooseInputscene.SetActive(true);
+        Time.timeScale = 0f;
+
+    }
+
     public void Exit()
     {
             //Application.Quit();
@@ -135,6 +149,24 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
     }
+
+    public void buttonInput()
+    {
+        Debug.Log("Star Game");
+        useKeyboardInput = false;
+        ChooseInputscene.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void keyBoardInput()
+    {
+        Debug.Log("Star Game");
+        useKeyboardInput = true;
+        ChooseInputscene.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+
     public void level2()
     {
         Debug.Log("Level 2");
