@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         {
             checkKeyBoardInput();
         }
-
+       
         move();
         //win();
     }
@@ -214,4 +214,5 @@ public class Player : MonoBehaviour
         moveDown = false;
     }
 
+    
 }
