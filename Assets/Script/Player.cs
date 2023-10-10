@@ -145,14 +145,14 @@ public class Player : MonoBehaviour
 
     public void Restart()
     {
-        Debug.Log("Star Game");
+        Debug.Log("Start Game");
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
     }
 
     public void buttonInput()
     {
-        Debug.Log("Star Game");
+        Debug.Log("Start Game");
         useKeyboardInput = false;
         ChooseInputscene.SetActive(false);
         Time.timeScale = 1f;
@@ -160,7 +160,7 @@ public class Player : MonoBehaviour
 
     public void keyBoardInput()
     {
-        Debug.Log("Star Game");
+        Debug.Log("Start Game");
         useKeyboardInput = true;
         ChooseInputscene.SetActive(false);
         Time.timeScale = 1f;
