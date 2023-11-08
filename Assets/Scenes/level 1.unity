@@ -4485,6 +4485,7 @@ MonoBehaviour:
   speed: 5
   Winscene: {fileID: 560915740}
   Losescene: {fileID: 1216922528}
+  Moves: {fileID: 2124153511}
   ChooseInputscene: {fileID: 595392426}
 --- !u!1 &1530127313
 GameObject:

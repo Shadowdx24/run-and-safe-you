@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     
     [SerializeField] GameObject Losescene;
 
+    [SerializeField] GameObject Moves;
+
     [SerializeField] GameObject ChooseInputscene;
 
     private bool moveUp=false;
@@ -162,6 +164,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Start Game");
         useKeyboardInput = true;
+        Moves.SetActive(false);
         ChooseInputscene.SetActive(false);
         Time.timeScale = 1f;
     }
